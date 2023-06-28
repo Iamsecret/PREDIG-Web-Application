@@ -1,0 +1,24 @@
+1000	1000	10000	1000	1000	1000	1000	350		1000	1000	1 	1 	1 	1 	1	0.1 	0.1 	5
+
+
+
+
+
+# EG Kcat
+# EG Km 
+# CBH processive digestion rate
+# BGL Kcat 
+# BGL Km
+# XYL Kcat 
+# XYL Km
+# Lignin_adhesion_rate
+# CBH Kcat (attachment rate) 
+# CBH Km (attachment rate) 
+# inhibition binding affinity of cellobiose to EG 
+# inhibition binding affinity of cellobiose to CBH 
+# inhibition binding affinity of glucose to EG 
+# inhibition binding affinity of glucose to CBH 
+# inhibition binding affinity of glucose to BGL 
+# digestibility ratio of "crystalline" and "amorphous" cellulose 
+# digestibility ratio of "crystalline" and "amorphous" hemicellulose 
+# Enzyme size: radius
