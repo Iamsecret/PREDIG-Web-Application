@@ -15,7 +15,7 @@ const AboutUsHomeCard = () => {
   return (
     <Card
       style={{
-        minHeight: "650px",
+        minHeight: "700px",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",

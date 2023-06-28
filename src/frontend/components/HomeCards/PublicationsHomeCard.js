@@ -15,7 +15,7 @@ const PublicationsHomeCard = () => {
   return (
     <Card
       style={{
-        minHeight: "650px",
+        minHeight: "700px",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
@@ -23,7 +23,7 @@ const PublicationsHomeCard = () => {
       elevation={5}
     >
       <Box>
-        <CardHeader title="Publications" />
+        <CardHeader title="Publication & Sources" />
         <Divider />
       </Box>
       <CardMedia
