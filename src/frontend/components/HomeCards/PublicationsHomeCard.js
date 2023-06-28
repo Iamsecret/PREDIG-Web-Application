@@ -23,7 +23,7 @@ const PublicationsHomeCard = () => {
       elevation={5}
     >
       <Box>
-        <CardHeader title="Publication & Sources" />
+        <CardHeader title="Publications & Sources" />
         <Divider />
       </Box>
       <CardMedia
