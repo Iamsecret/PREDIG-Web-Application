@@ -120,6 +120,12 @@ const Simulation = () => {
         errors["PER_H"] = true;
         errors["PER_L"] = true;
       }
+
+      if (parseFloat(values["PER_C_H"]) > parseFloat(values["PER_C_C"])) {
+        errors["PER_C_H"] = true;
+        errors["PER_C_C"] = true;
+      }
+
       return errors;
     },
   });

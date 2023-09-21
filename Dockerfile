@@ -12,7 +12,8 @@ RUN apt-get update && apt-get dist-upgrade -y && \
 RUN pip3 install --upgrade pip
 RUN pip3 --no-cache-dir install \ 
     numpy\ 
-    matplotlib
+    matplotlib\
+    scikit-learn
 RUN pip3 --no-cache-dir install scipy
 
 #Node

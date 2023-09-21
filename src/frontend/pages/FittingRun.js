@@ -24,6 +24,8 @@ const FittingRun = () => {
     []
   );
 
+  const [rSquaredList, setRSquaredList] = useState([]);
+
   const [kineticParametersToFit, setKineticParametersToFit] = useState([]);
 
   const [initParametersToFit, setInitParametersToFit] = useState([]);
@@ -41,6 +43,11 @@ const FittingRun = () => {
       axios.get("/api/fitting/runs/" + params.runId).then((resp) => {
         setRunData(resp.data);
       }),
+      axios
+        .get("/api/fitting/runs/" + params.runId + "/rSquared")
+        .then((resp) => {
+          setRSquaredList(resp.data);
+        }),
       axios
         .get("/api/fitting/runs/" + params.runId + "/parameters")
         .then((resp) => {
@@ -183,6 +190,29 @@ const FittingRun = () => {
                       />
                     </Grid>
                   </Grid>
+                  <Typography
+                    variant="h6"
+                    sx={{ textAlign: "center", padding: "1em" }}
+                  >
+                    Coefficient of determination (R<sup>2</sup>)
+                  </Typography>
+                  <Typography
+                    sx={{ textAlign: "center", paddingBottom: "1em" }}
+                  >
+                    Glucose R<sup>2</sup>:{" "}
+                    {rSquaredList[i].glc === undefined
+                      ? "N.A."
+                      : rSquaredList[i].glc}
+                  </Typography>
+                  <Typography
+                    sx={{ textAlign: "center", paddingBottom: "1em" }}
+                  >
+                    Xylose R<sup>2</sup>:{" "}
+                    {rSquaredList[i].xyl === undefined
+                      ? "N.A."
+                      : rSquaredList[i].xyl}
+                  </Typography>
+                  <Divider />
                 </>
               );
             })}

@@ -24,6 +24,7 @@ const apiFittingParametersEndpoint = require("./endpoints/ApiFittingParametersEn
 const apiFittingParametersToFitEndpoint = require("./endpoints/ApiFittingParametersToFitEndpoint");
 const apiRunAnimationDownloadEndpoint = require("./endpoints/ApiRunAnimationDownloadEndpoint");
 const apiSampleFileExperimentalEndpoint = require("./endpoints/ApiSampleFileExperimentalEndpoint");
+const apiFittingRSquaredEndpoint = require("./endpoints/ApiFittingRSquaredEndpoint");
 
 db.init();
 
@@ -122,6 +123,8 @@ app.get(apiRunParametersEndpoint.path, apiRunParametersEndpoint.callback);
 app.get(apiFittingPlotsEndpoint.path, apiFittingPlotsEndpoint.callback);
 
 app.get(apiFittingRunEndpoint.path, apiFittingRunEndpoint.callback);
+
+app.get(apiFittingRSquaredEndpoint.path, apiFittingRSquaredEndpoint.callback);
 
 app.get(
   apiSampleFileExperimentalEndpoint.path,

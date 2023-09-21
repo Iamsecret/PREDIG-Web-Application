@@ -258,12 +258,30 @@ const Fitting = () => {
         return errors;
       };
 
+      let crystallineValidation = (values, errors, index) => {
+        if (
+          parseFloat(values["PER_C_H" + index]) >
+          parseFloat(values["PER_C_C" + index])
+        ) {
+          errors["PER_C_H" + index] = true;
+          errors["PER_C_C" + index] = true;
+        }
+        return errors;
+      };
+
       errors = percentagesValidation(values, errors, "");
       errors = percentagesValidation(values, errors, "_1");
       errors = percentagesValidation(values, errors, "_2");
       errors = percentagesValidation(values, errors, "_3");
       errors = percentagesValidation(values, errors, "_4");
       errors = percentagesValidation(values, errors, "_5");
+
+      errors = crystallineValidation(values, errors, "");
+      errors = crystallineValidation(values, errors, "_1");
+      errors = crystallineValidation(values, errors, "_2");
+      errors = crystallineValidation(values, errors, "_3");
+      errors = crystallineValidation(values, errors, "_4");
+      errors = crystallineValidation(values, errors, "_5");
 
       return errors;
     },

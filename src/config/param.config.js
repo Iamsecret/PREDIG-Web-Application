@@ -267,12 +267,12 @@ module.exports = [
           "It represents the ratio between digestibility of crystalline and amorphous cellulose.\
           The lower the value, the harder it is to digest crystalline bonds as compared to their amorphous counterparts. A value of 0 means the crystalline bonds are absolutely indigestible, while a value of 1 means both crystalline and amorphous bonds are indistinguishable, and their digestibility is set to the value of amorphous bonds. A value of 0.1, makes crystalline bonds 10 times harder to digest while a value of 0.01, makes crystalline bonds 100 times harder to digest compared to their amorphous counterparts.\
           No Unit. \
-          Ranging from 0.00001 to 0.1.",
+          Ranging from 0.00001 to 1.",
         unit: "dimensionless number (decimal)",
         defaultValue: 0.05,
-        errorText: "Value should be between 0.00001 and 0.1.",
+        errorText: "Value should be between 0.00001 and 1.",
         validationFunction: (value) => {
-          return value >= 0.00001 && value <= 0.1;
+          return value >= 0.00001 && value <= 1;
         },
         isUsedForFitting: true,
         index: 15,
@@ -284,12 +284,12 @@ module.exports = [
           "It represents the ratio between digestibility of crystalline and amorphous hemicellulose.\
           The lower the value, the harder it is to digest crystalline bonds as compared to their amorphous counterparts. A value of 0 means the crystalline bonds are absolutely indigestible, while a value of 1 means both crystalline and amorphous bonds are indistinguishable, and their digestibility is set to the value of amorphous bonds. A value of 0.1, makes crystalline bonds 10 times harder to digest while a value of 0.01, makes crystalline bonds 100 times harder to digest compared to their amorphous counterparts.\
           No Unit. \
-          Ranging from 0.00001 to 0.1.",
+          Ranging from 0.00001 to 1.",
         unit: "dimensionless number (decimal)",
         defaultValue: 0.01,
-        errorText: "Value should be between 0.00001 and 0.1.",
+        errorText: "Value should be between 0.00001 and 1.",
         validationFunction: (value) => {
-          return value >= 0.00001 && value <= 0.1;
+          return value >= 0.00001 && value <= 1;
         },
         isUsedForFitting: true,
         index: 16,
@@ -446,7 +446,8 @@ module.exports = [
           Ranging from 0 to 1.",
         unit: "dimensionless number (decimal)",
         defaultValue: 0.02,
-        errorText: "Value should be between 0 and 1.",
+        errorText:
+          "Value should be between 0 and 1. The percentage of crystalline hemicellulose cannot be more than that of cellulose.",
         validationFunction: (value) => {
           return value >= 0 && value <= 1;
         },
@@ -463,7 +464,8 @@ module.exports = [
           Ranging from 0 to 1.",
         unit: "dimensionless number (decimal)",
         defaultValue: 0.02,
-        errorText: "Value should be between 0 and 1.",
+        errorText:
+          "Value should be between 0 and 1. The percentage of crystalline hemicellulose cannot be more than that of cellulose.",
         validationFunction: (value) => {
           return value >= 0 && value <= 1;
         },
